@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Generate</class>
- <widget class="QDialog" name="Generate">
+ <class>GenerateWindow</class>
+ <widget class="QDialog" name="GenerateWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>268</width>
-    <height>248</height>
+    <height>285</height>
    </rect>
   </property>
   <property name="windowTitle">
