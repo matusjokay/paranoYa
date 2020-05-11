@@ -14,6 +14,10 @@ application for pseudorandom number generators testing
 
 `pyuic5 <path>/<file_from> -o <path>/<file_to>`
 
+**convert .ui file to Python code with included main func**
+
+`pyuic5 -x <path>/<file_from> -o <path>/<file_to>`
+
 **update packages from requirements file**
 
 `pip freeze > <path>/requirements.txt`
