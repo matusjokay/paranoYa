@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Testing</class>
+ <widget class="QDialog" name="Testing">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>665</width>
+    <height>519</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Testing</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:#D8D8D8</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QPushButton" name="Pausebtn">
+        <property name="styleSheet">
+         <string notr="true">background-color:#790E0E;color:#F86262</string>
+        </property>
+        <property name="text">
+         <string>Pause</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Continuebtn">
+        <property name="styleSheet">
+         <string notr="true">background-color:#790E0E;color:#F86262</string>
+        </property>
+        <property name="text">
+         <string>Continue</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Cancelbtn">
+        <property name="styleSheet">
+         <string notr="true">background-color:#790E0E;color:#F86262</string>
+        </property>
+        <property name="text">
+         <string>Cancel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="CancelAllbtn">
+        <property name="styleSheet">
+         <string notr="true">background-color:#790E0E;color:#F86262</string>
+        </property>
+        <property name="text">
+         <string>CancelAll</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget_2" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QWidget" name="Info_Area" native="true">
+        <property name="styleSheet">
+         <string notr="true">background-color:#790E0E</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QWidget" name="Info_Text" native="true">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="styleSheet">
+               <string notr="true">color:#F86262</string>
+              </property>
+              <property name="text">
+               <string>Information</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTextEdit" name="textEdit">
+           <property name="styleSheet">
+            <string notr="true">background-color:#E7E4E4</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

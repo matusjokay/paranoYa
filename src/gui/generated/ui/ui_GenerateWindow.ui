@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Generate</class>
+ <widget class="QDialog" name="Generate">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>286</width>
+    <height>239</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Generate</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:#D8D8D8</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <widget class="QWidget" name="ButtonBox" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="GenInfobtn">
+        <property name="styleSheet">
+         <string notr="true">background-color:#720E0E;color:#F86262</string>
+        </property>
+        <property name="text">
+         <string>Info</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="GenGeneratebtn">
+        <property name="styleSheet">
+         <string notr="true">background-color:#720E0E;color:#F86262</string>
+        </property>
+        <property name="text">
+         <string>Generate</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="ParamBox" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="GenParam1lbl">
+        <property name="styleSheet">
+         <string notr="true">background-color:#D8D8D8;color:#550202</string>
+        </property>
+        <property name="text">
+         <string>Destination path</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="GenInput1">
+        <property name="styleSheet">
+         <string notr="true">background-color:#FFFFFF;color:#550202</string>
+        </property>
+        <property name="text">
+         <string>C://GenHere</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="GenParam2lbl">
+        <property name="styleSheet">
+         <string notr="true">background-color:#D8D8D8;color:#550202</string>
+        </property>
+        <property name="text">
+         <string>Output format</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="OutputFormatcBox">
+        <property name="styleSheet">
+         <string notr="true">background-color:white;color:#550202</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>DSA private keys</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>DSA private messages</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ANSI X9.17(RIJNDAEL)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ANSI X9.17(DES)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>BBS</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="GenParam3lbl">
+        <property name="styleSheet">
+         <string notr="true">background-color:#D8D8D8;color:#550202</string>
+        </property>
+        <property name="text">
+         <string>ByteCount</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="GenInput3">
+        <property name="styleSheet">
+         <string notr="true">background-color:#FFFFFF;color:#550202</string>
+        </property>
+        <property name="text">
+         <string>ByteCount is a number, pal</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
