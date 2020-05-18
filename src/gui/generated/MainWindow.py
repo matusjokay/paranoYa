@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'MainWindow.ui'
+# Form implementation generated from reading ui file 'Paranoya-main.ui'
 #
 # Created by: PyQt5 UI code generator 5.14.2
 #
@@ -8,14 +8,64 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from GUI.GenerateWindow import Ui_GenerateWindow
+from GUI.AddTestWindow import Ui_AddTestWindow
+from GUI.ResultsWindow import Ui_ResultsWindow
+from GUI.SequenceWindow import Ui_SequenceWindow
+from GUI.SummaryWindow import Ui_SummaryWindow
+from GUI.LoadTestWindow import Ui_LoadTestWindow
+from GUI.TestingWindow import Ui_TestingWindow
 
 class Ui_MainWindow(object):
+
+    def openGen(self):
+        self.window = QtWidgets.QDialog()
+        self.ui = Ui_GenerateWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
+    def openAddTest(self):
+        self.window = QtWidgets.QDialog()
+        self.ui = Ui_AddTestWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
+    def openRes(self):
+        self.window = QtWidgets.QDialog()
+        self.ui = Ui_ResultsWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
+    def openSeq(self):
+        self.window = QtWidgets.QDialog()
+        self.ui = Ui_SequenceWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
+    def openSum(self):
+        self.window = QtWidgets.QDialog()
+        self.ui = Ui_SummaryWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
+    def openTest(self):
+        self.window = QtWidgets.QDialog()
+        self.ui = Ui_TestingWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
+    def openLoad(self):
+        self.window = QtWidgets.QDialog()
+        self.ui = Ui_LoadTestWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(904, 753)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.centralwidget.setStyleSheet("background-color:#D8D8D8")
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralwidget)
         self.horizontalLayout.setObjectName("horizontalLayout")
@@ -26,36 +76,48 @@ class Ui_MainWindow(object):
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
         self.pushButton_2 = QtWidgets.QPushButton(self.widget)
+        self.pushButton_2.setStyleSheet("background-color:#790E0E;color:#F86262")
         self.pushButton_2.setObjectName("pushButton_2")
         self.verticalLayout.addWidget(self.pushButton_2)
         self.pushButton_4 = QtWidgets.QPushButton(self.widget)
+        self.pushButton_4.setStyleSheet("background-color:#790E0E;color:#F86262")
         self.pushButton_4.setObjectName("pushButton_4")
         self.verticalLayout.addWidget(self.pushButton_4)
         self.pushButton_5 = QtWidgets.QPushButton(self.widget)
+        self.pushButton_5.setStyleSheet("background-color:#790E0E;color:#F86262")
         self.pushButton_5.setObjectName("pushButton_5")
         self.verticalLayout.addWidget(self.pushButton_5)
         self.pushButton_3 = QtWidgets.QPushButton(self.widget)
+        self.pushButton_3.setStyleSheet("background-color:#790E0E;color:#F86262")
         self.pushButton_3.setObjectName("pushButton_3")
         self.verticalLayout.addWidget(self.pushButton_3)
         self.pushButton = QtWidgets.QPushButton(self.widget)
+        self.pushButton.setStyleSheet("background-color:#790E0E;color:#F86262")
         self.pushButton.setObjectName("pushButton")
         self.verticalLayout.addWidget(self.pushButton)
         self.verticalLayout_3.addLayout(self.verticalLayout)
         self.horizontalLayout.addWidget(self.widget)
-        spacerItem = QtWidgets.QSpacerItem(150, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem)
-        self.widget_2 = QtWidgets.QWidget(self.centralwidget)
-        self.widget_2.setObjectName("widget_2")
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.widget_2)
+        self.Info_Area = QtWidgets.QWidget(self.centralwidget)
+        self.Info_Area.setStyleSheet("background-color:#790E0E")
+        self.Info_Area.setObjectName("Info_Area")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.Info_Area)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
+        self.Info_Text = QtWidgets.QWidget(self.Info_Area)
+        self.Info_Text.setStyleSheet("background-color:#790E0E;color:#F86262")
+        self.Info_Text.setObjectName("Info_Text")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.Info_Text)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.label = QtWidgets.QLabel(self.widget_2)
+        self.label = QtWidgets.QLabel(self.Info_Text)
+        self.label.setStyleSheet("")
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         self.verticalLayout_2.addWidget(self.label)
-        self.textEdit = QtWidgets.QTextEdit(self.widget_2)
+        self.verticalLayout_4.addWidget(self.Info_Text)
+        self.textEdit = QtWidgets.QTextEdit(self.Info_Area)
+        self.textEdit.setStyleSheet("background-color:#E7E4E4")
         self.textEdit.setObjectName("textEdit")
-        self.verticalLayout_2.addWidget(self.textEdit)
-        self.horizontalLayout.addWidget(self.widget_2)
+        self.verticalLayout_4.addWidget(self.textEdit)
+        self.horizontalLayout.addWidget(self.Info_Area)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 904, 21))
@@ -74,6 +136,51 @@ class Ui_MainWindow(object):
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+        self.actionCredits = QtWidgets.QAction(MainWindow)
+        self.actionCredits.setObjectName("actionCredits")
+        self.actionNew = QtWidgets.QAction(MainWindow)
+        self.actionNew.setObjectName("actionNew")
+        self.actionOpen = QtWidgets.QAction(MainWindow)
+        self.actionOpen.setObjectName("actionOpen")
+        self.actionSave = QtWidgets.QAction(MainWindow)
+        self.actionSave.setObjectName("actionSave")
+        self.actionSave_as = QtWidgets.QAction(MainWindow)
+        self.actionSave_as.setObjectName("actionSave_as")
+        self.actionLoad = QtWidgets.QAction(MainWindow)
+        self.actionLoad.setObjectName("actionLoad")
+        self.actionExit = QtWidgets.QAction(MainWindow)
+        self.actionExit.setObjectName("actionExit")
+        self.actionCut = QtWidgets.QAction(MainWindow)
+        self.actionCut.setObjectName("actionCut")
+        self.actionPaste = QtWidgets.QAction(MainWindow)
+        self.actionPaste.setObjectName("actionPaste")
+        self.actionCopy = QtWidgets.QAction(MainWindow)
+        self.actionCopy.setObjectName("actionCopy")
+        self.actionDelete = QtWidgets.QAction(MainWindow)
+        self.actionDelete.setObjectName("actionDelete")
+        self.actionUndo = QtWidgets.QAction(MainWindow)
+        self.actionUndo.setObjectName("actionUndo")
+        self.actionRedo = QtWidgets.QAction(MainWindow)
+        self.actionRedo.setObjectName("actionRedo")
+        self.actionManual = QtWidgets.QAction(MainWindow)
+        self.actionManual.setObjectName("actionManual")
+        self.menuFile.addAction(self.actionNew)
+        self.menuFile.addAction(self.actionOpen)
+        self.menuFile.addSeparator()
+        self.menuFile.addAction(self.actionSave)
+        self.menuFile.addAction(self.actionSave_as)
+        self.menuFile.addAction(self.actionLoad)
+        self.menuFile.addSeparator()
+        self.menuFile.addAction(self.actionExit)
+        self.menuOption.addAction(self.actionUndo)
+        self.menuOption.addAction(self.actionRedo)
+        self.menuOption.addSeparator()
+        self.menuOption.addAction(self.actionCut)
+        self.menuOption.addAction(self.actionPaste)
+        self.menuOption.addAction(self.actionCopy)
+        self.menuOption.addAction(self.actionDelete)
+        self.menuHelp.addAction(self.actionManual)
+        self.menuAbout.addAction(self.actionCredits)
         self.menubar.addAction(self.menuFile.menuAction())
         self.menubar.addAction(self.menuOption.menuAction())
         self.menubar.addAction(self.menuView.menuAction())
@@ -82,6 +189,13 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+        self.pushButton.clicked.connect(self.openGen)
+        self.pushButton.clicked.connect(self.openLoad)
+        self.pushButton_2.clicked.connect(self.openAddTest)
+        self.pushButton_3.clicked.connect(self.openTest)
+        self.pushButton_4.clicked.connect(self.openSeq)
+        self.pushButton_5.clicked.connect(self.openGen)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -97,6 +211,20 @@ class Ui_MainWindow(object):
         self.menuView.setTitle(_translate("MainWindow", "View"))
         self.menuHelp.setTitle(_translate("MainWindow", "Help"))
         self.menuAbout.setTitle(_translate("MainWindow", "About"))
+        self.actionCredits.setText(_translate("MainWindow", "Credits"))
+        self.actionNew.setText(_translate("MainWindow", "New"))
+        self.actionOpen.setText(_translate("MainWindow", "Open"))
+        self.actionSave.setText(_translate("MainWindow", "Save"))
+        self.actionSave_as.setText(_translate("MainWindow", "Save as..."))
+        self.actionLoad.setText(_translate("MainWindow", "Load"))
+        self.actionExit.setText(_translate("MainWindow", "Exit"))
+        self.actionCut.setText(_translate("MainWindow", "Cut"))
+        self.actionPaste.setText(_translate("MainWindow", "Paste"))
+        self.actionCopy.setText(_translate("MainWindow", "Copy"))
+        self.actionDelete.setText(_translate("MainWindow", "Delete"))
+        self.actionUndo.setText(_translate("MainWindow", "Undo"))
+        self.actionRedo.setText(_translate("MainWindow", "Redo"))
+        self.actionManual.setText(_translate("MainWindow", "Manual"))
 
 
 if __name__ == "__main__":
