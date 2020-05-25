@@ -231,15 +231,22 @@ def main():
 
                     writer[i].writerow(writeDict)
 
+        success_ratio = 0
+        total_average = 0
+        if total_count:
+            success_ratio = float(success_count) / total_count
+            total_average = p_average / total_count
+
         writeDict = {}
         print(i, total_count)
-        writeDict[fieldnames[i][len(fieldnames[i]) - 1]] = float(success_count) / total_count
-        writeDict[fieldnames[i][len(fieldnames[i]) - 2]] = p_average / total_count
+        writeDict[fieldnames[i][len(fieldnames[i]) - 1]] = success_ratio
+        writeDict[fieldnames[i][len(fieldnames[i]) - 2]] = total_average
         writer[i].writerow(writeDict)
 
-        print("p_average = " + str(p_average / total_count))
-        print("passed percentage = " + str(float(success_count) / total_count))
+        print("p_average = " + str(total_average))
+        print("passed percentage = " + str(success_ratio))
         print("Test " + str(i + 1) + ": " + testlist[i] + " finished!")
+
     for i in range(13):
         print(output[i])
         print(i)
