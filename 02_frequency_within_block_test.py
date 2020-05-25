@@ -1,5 +1,5 @@
 import math
-import scipy as ss
+import scipy.special as sc
 from fractions import Fraction
 
 def test(input, n, M=32):
@@ -7,7 +7,7 @@ def test(input, n, M=32):
     # N = floor(n/M)
     # miniumum block size 20 bits, most blocks 100
     # fieldnames = ['number','chisq','p-value', 'success']
-    
+
     N = int(math.floor(n/M))
     
     if N > 99:
@@ -39,7 +39,7 @@ def test(input, n, M=32):
     for prop in proportions:
         chisq += 4.0*block_size*((prop - Fraction(1,2))**2)
     
-    p = ss.gammaincc((num_of_blocks/2.0),float(chisq)/2.0) # p-value
+    p = sc.gammaincc((num_of_blocks/2.0),float(chisq)/2.0) # p-value
     
     success = (p>= 0.01)
 
