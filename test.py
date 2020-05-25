@@ -24,6 +24,12 @@ testlist = [
 # getInput.getInput()
 
 
+def line2bits(line):
+    line = ''.join([c for c in line if c not in [' ', '\t', '\n']])
+    line = ''.join(["{:04b}".format(int(c,16)) for c in line])
+    return line
+
+
 def main():
     input = "input.txt"  # input file containing bit strings
 
@@ -91,9 +97,10 @@ def main():
 
             bits = ''
             for line in fi:
+                bits += line2bits(line)
 
                 if len(bits) < 38912 * 2:  # recommended input size
-                    bits += line[:-1]
+                    continue
 
                 else:
 
@@ -112,13 +119,15 @@ def main():
 
                     writer[i].writerow(writeDict)
                     bits = ''
+            bits = ''
 
         # overlapping_template_matching_test            
         elif i == 7:
             bits = ''
             for line in fi:
+                bits += line2bits(line)
                 if len(bits) < 1028016 * 2:  # recommended input size
-                    bits += line[:-1]
+                    continue
                 else:
                     total_count += 1
                     x = testFile.test(bits, len(bits))
@@ -135,13 +144,15 @@ def main():
 
                     writer[i].writerow(writeDict)
                     bits = ''
+            bits = ''
 
         # maurers_universal_test
         elif i == 8:
             bits = ''
             for line in fi:
+                bits += line2bits(line)
                 if len(bits) < 387840 * 2:  # recommended input size
-                    bits += line[:-1]
+                    continue
                 else:
                     total_count += 1
                     x = testFile.test(bits, len(bits))
@@ -158,14 +169,16 @@ def main():
 
                     writer[i].writerow(writeDict)
                     bits = ''
+            bits = ''
 
         # linear_complexity_test
         elif i == 9:
 
             bits = ''
             for line in fi:
+                bits += line2bits(line)
                 if len(bits) < 1000000:  # recommended input size
-                    bits += line[:-1]
+                    continue
                 else:
                     total_count += 1
                     x = testFile.test(bits, len(bits))
@@ -182,13 +195,15 @@ def main():
 
                     writer[i].writerow(writeDict)
                     bits = ''
+            bits = ''
 
         # random_excursion_test and random_excursion_variant_test
         elif i == 13 or i == 14:
             bits = ''
             for line in fi:
+                bits += line2bits(line)
                 if len(bits) < 1000000 * 2:  # recommended input size
-                    bits += line[:-1]
+                    continue
                 else:
                     total_count += 1
                     x = testFile.test(bits, len(bits))
@@ -208,6 +223,7 @@ def main():
 
                     writer[i].writerow(writeDict)
                     bits = ''
+            bits = ''
         else:
 
             for line in fi:
@@ -215,7 +231,8 @@ def main():
                 total_count += 1
                 if fieldnames[i] is not None:
 
-                    x = testFile.test(line[:-1], len(line[:-1]))
+                    bits = line2bits(line)
+                    x = testFile.test(bits, len(bits))
 
                     p_average += x[len(x) - 2]
 
@@ -224,7 +241,7 @@ def main():
 
                     writeDict = {}
 
-                    writeDict[fieldnames[i][0]] = len(line[:-1])
+                    writeDict[fieldnames[i][0]] = len(bits)
 
                     for j in range(len(x)):
                         writeDict[fieldnames[i][j + 1]] = x[j]
