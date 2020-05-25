@@ -1,5 +1,5 @@
 import math
-import scipy.special as ss
+import scipy as ss
 from fractions import Fraction
 
 def test(input, n, M=32):
