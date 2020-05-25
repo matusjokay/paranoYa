@@ -7,14 +7,15 @@
 # WARNING! All changes made in this file will be lost!
 
 
-from PyQt5 import QtCore, QtGui, QtWidgets
-from GUI.GenerateWindow import Ui_GenerateWindow
-from GUI.AddTestWindow import Ui_AddTestWindow
-from GUI.ResultsWindow import Ui_ResultsWindow
-from GUI.SequenceWindow import Ui_SequenceWindow
-from GUI.SummaryWindow import Ui_SummaryWindow
-from GUI.LoadTestWindow import Ui_LoadTestWindow
-from GUI.TestingWindow import Ui_TestingWindow
+from PyQt5 import QtCore, QtWidgets
+from src.gui.generated.AddTestWindow import Ui_AddTestWindow
+from src.gui.generated.GenerateWindow import Ui_GenerateWindow
+from src.gui.generated.LoadTestWindow import Ui_LoadTestWindow
+from src.gui.generated.ResultsWindow import Ui_ResultsWindow
+from src.gui.generated.SequenceWindow import Ui_SequenceWindow
+from src.gui.generated.SummaryWindow import Ui_SummaryWindow
+from src.gui.generated.TestingWindow import Ui_TestingWindow
+
 
 class Ui_MainWindow(object):
 
