@@ -8,16 +8,11 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from src.gui.generated.SummaryWindow import Ui_SummaryWindow
+from gui.generated.SummaryWindow import Ui_SummaryWindow
 
 
 class Ui_ResultsWindow(object):
 
-    def openSum(self):
-        self.window = QtWidgets.QDialog()
-        self.ui = Ui_SummaryWindow()
-        self.ui.setupUi(self.window)
-        self.window.show()
 
     def setupUi(self, ResultsWindow):
         ResultsWindow.setObjectName("Dialog")

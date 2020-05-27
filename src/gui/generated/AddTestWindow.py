@@ -6,7 +6,6 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
@@ -46,10 +45,6 @@ class Ui_AddTestWindow(object):
         self.Test_List = QtWidgets.QListWidget(self.TestArea)
         self.Test_List.setStyleSheet("background-color:#FFFFFF;color:#520202")
         self.Test_List.setObjectName("Test_List")
-        item = QtWidgets.QListWidgetItem()
-        self.Test_List.addItem(item)
-        item = QtWidgets.QListWidgetItem()
-        self.Test_List.addItem(item)
         self.verticalLayout_3.addWidget(self.Test_List)
         self.horizontalLayout.addWidget(self.TestArea)
         self.InputArea = QtWidgets.QWidget(self.Info_Area)
@@ -108,9 +103,9 @@ class Ui_AddTestWindow(object):
         self.verticalLayout_4.addWidget(self.ButtonArea)
         spacerItem4 = QtWidgets.QSpacerItem(671, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.verticalLayout_4.addItem(spacerItem4)
-
         self.retranslateUi(AddTestWindow)
         QtCore.QMetaObject.connectSlotsByName(AddTestWindow)
+
 
     def retranslateUi(self, AddTestWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -122,10 +117,6 @@ class Ui_AddTestWindow(object):
         self.Addbtn.setText(_translate("Dialog", "Add"))
         __sortingEnabled = self.Test_List.isSortingEnabled()
         self.Test_List.setSortingEnabled(False)
-        item = self.Test_List.item(0)
-        item.setText(_translate("Dialog", "Test1"))
-        item = self.Test_List.item(1)
-        item.setText(_translate("Dialog", "Test2"))
         self.Test_List.setSortingEnabled(__sortingEnabled)
         self.Param1_lbl.setText(_translate("Dialog", "Param1"))
         self.Param1_input.setText(_translate("Dialog", "0.01"))
@@ -138,8 +129,12 @@ class Ui_AddTestWindow(object):
         self.Loadbtn.setText(_translate("Dialog", "Load"))
 
 
+
+
+
 if __name__ == "__main__":
     import sys
+    item_count = 0
     app = QtWidgets.QApplication(sys.argv)
     AddTestWindow = QtWidgets.QDialog()
     ui = Ui_AddTestWindow()

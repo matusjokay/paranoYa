@@ -6,60 +6,59 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-
 from PyQt5 import QtCore, QtWidgets
-from src.gui.generated.AddTestWindow import Ui_AddTestWindow
-from src.gui.generated.GenerateWindow import Ui_GenerateWindow
-from src.gui.generated.LoadTestWindow import Ui_LoadTestWindow
-from src.gui.generated.ResultsWindow import Ui_ResultsWindow
-from src.gui.generated.SequenceWindow import Ui_SequenceWindow
-from src.gui.generated.SummaryWindow import Ui_SummaryWindow
-from src.gui.generated.TestingWindow import Ui_TestingWindow
+from gui.generated.AddTestWindow import Ui_AddTestWindow
+from gui.generated.GenerateWindow import Ui_GenerateWindow
+from gui.generated.LoadTestWindow import Ui_LoadTestWindow
+from gui.generated.ResultsWindow import Ui_ResultsWindow
+from gui.generated.SequenceWindow import Ui_SequenceWindow
+from gui.generated.SummaryWindow import Ui_SummaryWindow
+from gui.generated.TestingWindow import Ui_TestingWindow
 
 
 class Ui_MainWindow(object):
 
-    def openGen(self):
-        self.window = QtWidgets.QDialog()
-        self.ui = Ui_GenerateWindow()
-        self.ui.setupUi(self.window)
-        self.window.show()
-
-    def openAddTest(self):
-        self.window = QtWidgets.QDialog()
-        self.ui = Ui_AddTestWindow()
-        self.ui.setupUi(self.window)
-        self.window.show()
-
-    def openRes(self):
-        self.window = QtWidgets.QDialog()
-        self.ui = Ui_ResultsWindow()
-        self.ui.setupUi(self.window)
-        self.window.show()
-
-    def openSeq(self):
-        self.window = QtWidgets.QDialog()
-        self.ui = Ui_SequenceWindow()
-        self.ui.setupUi(self.window)
-        self.window.show()
-
-    def openSum(self):
-        self.window = QtWidgets.QDialog()
-        self.ui = Ui_SummaryWindow()
-        self.ui.setupUi(self.window)
-        self.window.show()
-
-    def openTest(self):
-        self.window = QtWidgets.QDialog()
-        self.ui = Ui_TestingWindow()
-        self.ui.setupUi(self.window)
-        self.window.show()
-
-    def openLoad(self):
-        self.window = QtWidgets.QDialog()
-        self.ui = Ui_LoadTestWindow()
-        self.ui.setupUi(self.window)
-        self.window.show()
+    # def openGen(self):
+    #     self.window = QtWidgets.QDialog()
+    #     self.ui = Ui_GenerateWindow()
+    #     self.ui.setupUi(self.window)
+    #     self.window.show()
+    #
+    # def openAddTest(self):
+    #     self.window = QtWidgets.QDialog()
+    #     self.ui = Ui_AddTestWindow()
+    #     self.ui.setupUi(self.window)
+    #     self.window.show()
+    #
+    # def openRes(self):
+    #     self.window = QtWidgets.QDialog()
+    #     self.ui = Ui_ResultsWindow()
+    #     self.ui.setupUi(self.window)
+    #     self.window.show()
+    #
+    # def openSeq(self):
+    #     self.window = QtWidgets.QDialog()
+    #     self.ui = Ui_SequenceWindow()
+    #     self.ui.setupUi(self.window)
+    #     self.window.show()
+    #
+    # def openSum(self):
+    #     self.window = QtWidgets.QDialog()
+    #     self.ui = Ui_SummaryWindow()
+    #     self.ui.setupUi(self.window)
+    #     self.window.show()
+    #
+    # def openTest(self):
+    #     self.window = QtWidgets.QDialog()
+    #     self.ui = Ui_TestingWindow()
+    #     self.ui.setupUi(self.window)
+    #     self.window.show()
+    #
+    # def openLoad(self):
+    #     self.window = QtWidgets.QDialog()
+    #     self.ui = Ui_LoadTestWindow()
+    #     self.ui.setupUi(self.window)
+    #     self.window.show()
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -191,12 +190,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-        self.pushButton.clicked.connect(self.openGen)
-        self.pushButton.clicked.connect(self.openLoad)
-        self.pushButton_2.clicked.connect(self.openAddTest)
-        self.pushButton_3.clicked.connect(self.openTest)
-        self.pushButton_4.clicked.connect(self.openSeq)
-        self.pushButton_5.clicked.connect(self.openGen)
+
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
