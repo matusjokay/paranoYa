@@ -264,13 +264,13 @@ def main():
         print("passed percentage = " + str(success_ratio))
         print("Test " + str(i + 1) + ": " + testlist[i] + " finished!")
 
-    for i in range(13):
-        print(output[i])
-        print(i)
-        plot.plot(output[i], i)
+    # for i in range(13):
+    #     print(output[i])
+    #     print(i)
+    #     plot.plot(output[i], i)
     print(output[4])
     print(4)
-    plot.plot(output[4], 4)
+    # plot.plot(output[4], 4)
 
 
 if __name__ == "__main__":
