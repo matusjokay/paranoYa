@@ -19,7 +19,7 @@ from src.gui.generated.TestingWindow import Ui_TestingWindow
 
 class Ui_MainWindow(object):
 
-     def openGen(self):
+    def openGen(self):
         self.window = QtWidgets.QDialog()
         self.ui = Ui_GenerateWindow()
         self.ui.setupUi(self.window)
@@ -182,7 +182,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-	self.Generatebtn.clicked.connect(self.openGen)
+        self.Generatebtn.clicked.connect(self.openGen)
         self.SetTestbtn.clicked.connect(self.openLoad)
         self.NewTestbtn.clicked.connect(self.openAddTest)
         self.RunTestbtn.clicked.connect(self.openTest)
