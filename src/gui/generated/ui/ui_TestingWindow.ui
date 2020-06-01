@@ -13,18 +13,12 @@
   <property name="windowTitle">
    <string>Testing</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">background-color:#D8D8D8</string>
-  </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
     <widget class="QWidget" name="widget" native="true">
      <layout class="QVBoxLayout" name="verticalLayout_4">
       <item>
        <widget class="QPushButton" name="Pausebtn">
-        <property name="styleSheet">
-         <string notr="true">background-color:#790E0E;color:#F86262</string>
-        </property>
         <property name="text">
          <string>Pause</string>
         </property>
@@ -32,9 +26,6 @@
       </item>
       <item>
        <widget class="QPushButton" name="Continuebtn">
-        <property name="styleSheet">
-         <string notr="true">background-color:#790E0E;color:#F86262</string>
-        </property>
         <property name="text">
          <string>Continue</string>
         </property>
@@ -42,9 +33,6 @@
       </item>
       <item>
        <widget class="QPushButton" name="Cancelbtn">
-        <property name="styleSheet">
-         <string notr="true">background-color:#790E0E;color:#F86262</string>
-        </property>
         <property name="text">
          <string>Cancel</string>
         </property>
@@ -52,9 +40,6 @@
       </item>
       <item>
        <widget class="QPushButton" name="CancelAllbtn">
-        <property name="styleSheet">
-         <string notr="true">background-color:#790E0E;color:#F86262</string>
-        </property>
         <property name="text">
          <string>CancelAll</string>
         </property>
@@ -68,9 +53,6 @@
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
        <widget class="QWidget" name="Info_Area" native="true">
-        <property name="styleSheet">
-         <string notr="true">background-color:#790E0E</string>
-        </property>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
           <widget class="QWidget" name="Info_Text" native="true">
@@ -80,9 +62,6 @@
            <layout class="QVBoxLayout" name="verticalLayout">
             <item>
              <widget class="QLabel" name="label">
-              <property name="styleSheet">
-               <string notr="true">color:#F86262</string>
-              </property>
               <property name="text">
                <string>Information</string>
               </property>
@@ -95,11 +74,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QTextEdit" name="textEdit">
-           <property name="styleSheet">
-            <string notr="true">background-color:#E7E4E4</string>
-           </property>
-          </widget>
+          <widget class="QTextEdit" name="textEdit"/>
          </item>
         </layout>
        </widget>
