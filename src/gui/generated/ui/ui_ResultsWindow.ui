@@ -13,9 +13,6 @@
   <property name="windowTitle">
    <string>Results</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">background-color:#D8D8D8</string>
-  </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="QWidget" name="resultArea" native="true">
@@ -24,9 +21,6 @@
    </item>
    <item>
     <widget class="QLabel" name="Resultslbl">
-     <property name="styleSheet">
-      <string notr="true">color:#520202</string>
-     </property>
      <property name="text">
       <string>Results</string>
      </property>
@@ -36,40 +30,27 @@
     </widget>
    </item>
    <item>
-    <widget class="QTableView" name="resultTable">
-     <property name="styleSheet">
-      <string notr="true">background-color:#FFFFFF;color:#520202</string>
-     </property>
-    </widget>
+    <widget class="QTableView" name="resultTable"/>
    </item>
    <item>
     <widget class="QWidget" name="ButtonArea" native="true">
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QPushButton" name="pushButton">
-        <property name="styleSheet">
-         <string notr="true">background-color:#790E0E;color:#F86262</string>
-        </property>
+       <widget class="QPushButton" name="Summarybtn">
         <property name="text">
          <string>Summary</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="styleSheet">
-         <string notr="true">background-color:#790E0E;color:#F86262</string>
-        </property>
+       <widget class="QPushButton" name="Okbtn">
         <property name="text">
          <string>Ok</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_3">
-        <property name="styleSheet">
-         <string notr="true">background-color:#790E0E;color:#F86262</string>
-        </property>
+       <widget class="QPushButton" name="Cancelbtn">
         <property name="text">
          <string>Cancel</string>
         </property>
