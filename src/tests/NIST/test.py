@@ -1,4 +1,7 @@
 import csv
+import sys
+import getopt
+
 import getInput
 import plot
 
@@ -29,9 +32,15 @@ def line2bits(line):
     line = ''.join(["{:04b}".format(int(c,16)) for c in line])
     return line
 
+def main(files, test_indices):
+    for index, i in enumerate(files):
+        test(index, i, test_indices)
 
-def main():
-    input = "input.txt"  # input file containing bit strings
+
+def test(index, file, test_indices):
+    test_count = len(test_indices)
+    # input = "input.txt"  # input file containing bit strings
+    input = file
 
     NUM_TEST = 15
 
@@ -54,6 +63,13 @@ def main():
     fieldnames[13] = ['n', 'J', 'chi_sq', 'p-value', 'p_average', 'success']
     fieldnames[14] = ['n', 'J', 'count', 'p-value', 'p_average', 'success']
 
+    # fo = [None] * NUM_TEST  # list of output file
+    #
+    # output = [None] * NUM_TEST  # output file name
+    # writer = [None] * NUM_TEST  # writers of csv file
+    #
+    # source = [None] * NUM_TEST
+
     fo = [None] * NUM_TEST  # list of output file
 
     output = [None] * NUM_TEST  # output file name
@@ -61,12 +77,13 @@ def main():
 
     source = [None] * NUM_TEST
 
-    for i in range(NUM_TEST):
-        if i < 9:
-            output[i] = "results/result_0" + str(i + 1) + "_" + testlist[i] + ".csv"
-        else:
-            output[i] = "results/result_" + str(i + 1) + "_" + testlist[i] + ".csv"
-
+    # for i in range(NUM_TEST):
+    for i in test_indices:
+        # if i < 9:
+        #     output[i] = "results/result_0" + str(i + 1) + "_" + testlist[i] + ".csv"
+        # else:
+        #     output[i] = "results/result_" + str(i + 1) + "_" + testlist[i] + ".csv"
+        output[i] = "results/result_" + str(index) + "_" + testlist[i] + ".csv"
         if fieldnames[i] is not None:
             fo[i] = open(output[i], mode="w+")
             writer[i] = csv.DictWriter(fo[i], fieldnames=fieldnames[i])
@@ -74,9 +91,9 @@ def main():
 
     # fi = open(input, "r") # input file
 
-    result = [None] * NUM_TEST
+    result = [None] * test_count
 
-    for i in range(NUM_TEST):
+    for i in test_indices:
         total_count = 0
         success_count = 0
         p_average = 0.0
@@ -264,14 +281,9 @@ def main():
         print("passed percentage = " + str(success_ratio))
         print("Test " + str(i + 1) + ": " + testlist[i] + " finished!")
 
-    # for i in range(13):
-    #     print(output[i])
-    #     print(i)
-    #     plot.plot(output[i], i)
     print(output[4])
     print(4)
-    # plot.plot(output[4], 4)
 
 
 if __name__ == "__main__":
-    main()
+    main(['input.txt', 'input2.txt'], [2,3,4,5,6,12])
