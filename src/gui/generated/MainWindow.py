@@ -1,71 +1,30 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Paranoya-main.ui'
+# Form implementation generated from reading ui file 'ui_MainWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.14.2
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtWidgets
-from gui.generated.AddTestWindow import Ui_AddTestWindow
-from gui.generated.GenerateWindow import Ui_GenerateWindow
-from gui.generated.LoadTestWindow import Ui_LoadTestWindow
-from gui.generated.ResultsWindow import Ui_ResultsWindow
-from gui.generated.SequenceWindow import Ui_SequenceWindow
-from gui.generated.SummaryWindow import Ui_SummaryWindow
-from gui.generated.TestingWindow import Ui_TestingWindow
+from src.gui.generated.AddTestWindow import Ui_AddTestWindow
+from src.gui.generated.GenerateWindow import Ui_GenerateWindow
+from src.gui.generated.LoadTestWindow import Ui_LoadTestWindow
+from src.gui.generated.ResultsWindow import Ui_ResultsWindow
+from src.gui.generated.SequenceWindow import Ui_SequenceWindow
+from src.gui.generated.SummaryWindow import Ui_SummaryWindow
+from src.gui.generated.TestingWindow import Ui_TestingWindow
 
 
 class Ui_MainWindow(object):
 
-    # def openGen(self):
-    #     self.window = QtWidgets.QDialog()
-    #     self.ui = Ui_GenerateWindow()
-    #     self.ui.setupUi(self.window)
-    #     self.window.show()
-    #
-    # def openAddTest(self):
-    #     self.window = QtWidgets.QDialog()
-    #     self.ui = Ui_AddTestWindow()
-    #     self.ui.setupUi(self.window)
-    #     self.window.show()
-    #
-    # def openRes(self):
-    #     self.window = QtWidgets.QDialog()
-    #     self.ui = Ui_ResultsWindow()
-    #     self.ui.setupUi(self.window)
-    #     self.window.show()
-    #
-    # def openSeq(self):
-    #     self.window = QtWidgets.QDialog()
-    #     self.ui = Ui_SequenceWindow()
-    #     self.ui.setupUi(self.window)
-    #     self.window.show()
-    #
-    # def openSum(self):
-    #     self.window = QtWidgets.QDialog()
-    #     self.ui = Ui_SummaryWindow()
-    #     self.ui.setupUi(self.window)
-    #     self.window.show()
-    #
-    # def openTest(self):
-    #     self.window = QtWidgets.QDialog()
-    #     self.ui = Ui_TestingWindow()
-    #     self.ui.setupUi(self.window)
-    #     self.window.show()
-    #
-    # def openLoad(self):
-    #     self.window = QtWidgets.QDialog()
-    #     self.ui = Ui_LoadTestWindow()
-    #     self.ui.setupUi(self.window)
-    #     self.window.show()
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(904, 753)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.centralwidget.setStyleSheet("background-color:#D8D8D8")
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralwidget)
         self.horizontalLayout.setObjectName("horizontalLayout")
@@ -75,35 +34,28 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
-        self.pushButton_2 = QtWidgets.QPushButton(self.widget)
-        self.pushButton_2.setStyleSheet("background-color:#790E0E;color:#F86262")
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.verticalLayout.addWidget(self.pushButton_2)
-        self.pushButton_4 = QtWidgets.QPushButton(self.widget)
-        self.pushButton_4.setStyleSheet("background-color:#790E0E;color:#F86262")
-        self.pushButton_4.setObjectName("pushButton_4")
-        self.verticalLayout.addWidget(self.pushButton_4)
-        self.pushButton_5 = QtWidgets.QPushButton(self.widget)
-        self.pushButton_5.setStyleSheet("background-color:#790E0E;color:#F86262")
-        self.pushButton_5.setObjectName("pushButton_5")
-        self.verticalLayout.addWidget(self.pushButton_5)
-        self.pushButton_3 = QtWidgets.QPushButton(self.widget)
-        self.pushButton_3.setStyleSheet("background-color:#790E0E;color:#F86262")
-        self.pushButton_3.setObjectName("pushButton_3")
-        self.verticalLayout.addWidget(self.pushButton_3)
-        self.pushButton = QtWidgets.QPushButton(self.widget)
-        self.pushButton.setStyleSheet("background-color:#790E0E;color:#F86262")
-        self.pushButton.setObjectName("pushButton")
-        self.verticalLayout.addWidget(self.pushButton)
+        self.NewTestbtn = QtWidgets.QPushButton(self.widget)
+        self.NewTestbtn.setObjectName("NewTestbtn")
+        self.verticalLayout.addWidget(self.NewTestbtn)
+        self.AddSequencebtn = QtWidgets.QPushButton(self.widget)
+        self.AddSequencebtn.setObjectName("AddSequencebtn")
+        self.verticalLayout.addWidget(self.AddSequencebtn)
+        self.Generatebtn = QtWidgets.QPushButton(self.widget)
+        self.Generatebtn.setObjectName("Generatebtn")
+        self.verticalLayout.addWidget(self.Generatebtn)
+        self.RunTestbtn = QtWidgets.QPushButton(self.widget)
+        self.RunTestbtn.setObjectName("RunTestbtn")
+        self.verticalLayout.addWidget(self.RunTestbtn)
+        self.SetTestbtn = QtWidgets.QPushButton(self.widget)
+        self.SetTestbtn.setObjectName("SetTestbtn")
+        self.verticalLayout.addWidget(self.SetTestbtn)
         self.verticalLayout_3.addLayout(self.verticalLayout)
         self.horizontalLayout.addWidget(self.widget)
         self.Info_Area = QtWidgets.QWidget(self.centralwidget)
-        self.Info_Area.setStyleSheet("background-color:#790E0E")
         self.Info_Area.setObjectName("Info_Area")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.Info_Area)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.Info_Text = QtWidgets.QWidget(self.Info_Area)
-        self.Info_Text.setStyleSheet("background-color:#790E0E;color:#F86262")
         self.Info_Text.setObjectName("Info_Text")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.Info_Text)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
@@ -114,7 +66,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.addWidget(self.label)
         self.verticalLayout_4.addWidget(self.Info_Text)
         self.textEdit = QtWidgets.QTextEdit(self.Info_Area)
-        self.textEdit.setStyleSheet("background-color:#E7E4E4")
         self.textEdit.setObjectName("textEdit")
         self.verticalLayout_4.addWidget(self.textEdit)
         self.horizontalLayout.addWidget(self.Info_Area)
@@ -194,12 +145,12 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.pushButton_2.setText(_translate("MainWindow", "New Test"))
-        self.pushButton_4.setText(_translate("MainWindow", "Add sequence"))
-        self.pushButton_5.setText(_translate("MainWindow", "Generate"))
-        self.pushButton_3.setText(_translate("MainWindow", "Run Test"))
-        self.pushButton.setText(_translate("MainWindow", "Set test"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "ParanoYa"))
+        self.NewTestbtn.setText(_translate("MainWindow", "New Test"))
+        self.AddSequencebtn.setText(_translate("MainWindow", "Add sequence"))
+        self.Generatebtn.setText(_translate("MainWindow", "Generate"))
+        self.RunTestbtn.setText(_translate("MainWindow", "Run Test"))
+        self.SetTestbtn.setText(_translate("MainWindow", "Set test"))
         self.label.setText(_translate("MainWindow", "Information"))
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.menuOption.setTitle(_translate("MainWindow", "Option"))

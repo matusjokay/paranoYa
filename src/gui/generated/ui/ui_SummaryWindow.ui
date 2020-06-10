@@ -13,15 +13,9 @@
   <property name="windowTitle">
    <string>&quot;Filename&quot; summary</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">background-color:#D8D8D8</string>
-  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="filenamelbl">
-     <property name="styleSheet">
-      <string notr="true">color:#520202</string>
-     </property>
      <property name="text">
       <string>&quot;Filename&quot; summary</string>
      </property>
@@ -37,9 +31,6 @@
        <width>3</width>
        <height>10</height>
       </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color:#FFFFFF</string>
      </property>
     </widget>
    </item>

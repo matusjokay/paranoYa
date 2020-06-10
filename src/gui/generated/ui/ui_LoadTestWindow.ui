@@ -19,9 +19,6 @@
      <layout class="QVBoxLayout" name="verticalLayout_4">
       <item>
        <widget class="QPushButton" name="Loadbtn">
-        <property name="styleSheet">
-         <string notr="true">background-color:#720E0E;color:#F86262</string>
-        </property>
         <property name="text">
          <string>Load</string>
         </property>
@@ -35,21 +32,12 @@
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
        <widget class="QWidget" name="Info_Area" native="true">
-        <property name="styleSheet">
-         <string notr="true">background-color:#790E0E</string>
-        </property>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
           <widget class="QWidget" name="Info_Text" native="true">
-           <property name="styleSheet">
-            <string notr="true"/>
-           </property>
            <layout class="QVBoxLayout" name="verticalLayout">
             <item>
              <widget class="QLabel" name="label">
-              <property name="styleSheet">
-               <string notr="true">color:#F86262</string>
-              </property>
               <property name="text">
                <string>Information</string>
               </property>
@@ -62,11 +50,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QTextEdit" name="textEdit">
-           <property name="styleSheet">
-            <string notr="true">background-color:#E7E4E4</string>
-           </property>
-          </widget>
+          <widget class="QTextEdit" name="textEdit"/>
          </item>
         </layout>
        </widget>
@@ -79,3 +63,4 @@
  <resources/>
  <connections/>
 </ui>
+
