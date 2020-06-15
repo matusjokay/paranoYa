@@ -2,8 +2,8 @@ import csv
 import sys
 import getopt
 
-import getInput
-import plot
+import src.tests.NIST.getInput
+import src.tests.NIST.plot
 
 testlist = [
     'monobit_test',
@@ -83,7 +83,7 @@ def test(index, file, test_indices):
         #     output[i] = "results/result_0" + str(i + 1) + "_" + testlist[i] + ".csv"
         # else:
         #     output[i] = "results/result_" + str(i + 1) + "_" + testlist[i] + ".csv"
-        output[i] = "results/result_" + str(index) + "_" + testlist[i] + ".csv"
+        output[i] = "src/results/result_" + str(index) + "_" + testlist[i] + ".csv"
         if fieldnames[i] is not None:
             fo[i] = open(output[i], mode="w+")
             writer[i] = csv.DictWriter(fo[i], fieldnames=fieldnames[i])

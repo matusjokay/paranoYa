@@ -8,7 +8,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from gui.generated.SummaryWindow import Ui_SummaryWindow
+from src.gui.generated.SummaryWindow import Ui_SummaryWindow
 
 
 class Ui_ResultsWindow(object):
