@@ -19,7 +19,7 @@ Application for pseudorandom number generators testing. It implements tests suit
 
 # <a id="sr"></a>System requirements
 * Applications developed by PyQt are cross-platform,
-* NIST battery of tests require Python 2.7 version to run. 
+* NIST battery of tests requires Python 2.7 version to run. 
 
 # <a id="dev"></a>Development
 To obtain application 
